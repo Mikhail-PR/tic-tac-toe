@@ -1,0 +1,49 @@
+div.control#control
+    div.control__block#select-game-mode
+        h2.control__title Select game mode
+        div.control__btn-wrapper
+            +btn("Singleplayer", "", "singleplayer-btn")
+            +btn("Multiplayer", "", "multiplayer-btn")
+    div.control__block#singleplayer-options.control__block--hide
+        h2.control__title Singleplayer game
+        form.control__form(name="singleplayer")
+            div.control__form-wrapper
+                fieldset.control__form-fieldset
+                    legend.control__form-legend
+                        h3.control__form-legend-title Enter your name
+                    input.control__name(type="text" placeholder="playerName" value="Player" name="player-name")
+                fieldset.control__form-fieldset
+                    legend.control__form-legend
+                        h3.control__form-legend-title Сhoose a side
+                    label.control__side
+                        input.control__radio(type="radio" name="side" value="cross" checked)
+                        +cross("5", "control__radio-img")
+                    label.control__side
+                        input.control__radio(type="radio" name="side" value="zero")
+                        +zero("5", "control__radio-img")
+            div.control__btn-wrapper
+                +btn("Back", "btn--min", "back-btn")
+                +btn("Play", "", "play-btn")
+    div.control__block#multiplayer-options.control__block--hide
+        h2.control__title Multiplayer game
+        form.control__form(name="multiplayer")
+            div.control__form-wrapper
+                fieldset.control__form-fieldset
+                    legend.control__form-legend
+                        +cross("4", "control__form-legend-img")
+                        h3.control__form-legend-title Player name
+                    input.control__name(type="text" placeholder="playerName" value="Player1" name="player-name")
+                fieldset.control__form-fieldset
+                    legend.control__form-legend
+                        h3.control__form-legend-title Player name
+                        +zero("4", "control__form-legend-img")
+                    input.control__name(type="text" placeholder="playerName" value="Player2" name="player-name")
+            div.control__form-err-alert.control__form-err-alert--hide Duplicate names
+            div.control__btn-wrapper
+                +btn("Back", "btn--min", "back-btn")
+                +btn("Play", "", "play-btn")
+    div.control__block#end-game-window.control__block--hide
+        h2.control__title#winner-alert
+        div.control__btn-wrapper
+            +btn("Exit", "", "exit-btn")
+            +btn("Play More", "", "play-more-btn")

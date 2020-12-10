@@ -1,0 +1,25 @@
+.menu-window {
+  padding: 50px 150px;
+}
+
+.menu-window--hide {
+  display: none;
+}
+
+@media (max-width: $screen-xxl) {
+  .menu-window {
+    padding: 40px 110px;
+  }
+}
+
+@media (max-width: $screen-xl) {
+  .menu-window {
+    padding: 25px 75px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .menu-window {
+    padding: 10px 10px;
+  }
+}

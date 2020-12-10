@@ -1,0 +1,58 @@
+.btn {
+  height: 60px;
+  width: 200px;
+  border: $border;
+  background-color: $btn-color;
+
+  &:hover {
+    background-color: $active-color;
+  }
+}
+
+.btn--min {
+  height: 30px;
+  width: 80px;
+
+  .btn__text {
+    font-size: 15px;
+  }
+}
+
+.btn__text {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+@media (max-width: $screen-xxl) {
+  .btn {
+    height: 45px;
+    width: 150px;
+  }
+
+  .btn__text {
+    font-size: 18px;
+  }
+
+  .btn--min {
+    .btn__text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: $screen-xl) {
+  .btn {
+    height: 30px;
+    width: 100px;
+  }
+
+  .btn__text {
+    font-size: 12px;
+  }
+
+  .btn--min {
+    .btn__text {
+      font-size: 12px;
+    }
+  }
+}

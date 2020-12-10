@@ -1,0 +1,14 @@
+div.score
+    div.score__block(name="cross")
+        div.score__title-wrapper
+            +cross("5", "score__img")
+            h3.score__title(name="name")
+        div.score__value(name="value")
+    div.score__block.score__block--center(name="draw")
+        h3.score__title Draw
+        div.score__value(name="value")
+    div.score__block(name="zero")
+        div.score__title-wrapper
+            h3.score__title(name="name")
+            +zero("5", "score__img")
+        div.score__value(name="value")
